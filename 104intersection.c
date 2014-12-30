@@ -5,7 +5,7 @@
 ** Login   <brugue_m@epitech.net>
 ** 
 ** Started on  Tue Dec 30 17:15:18 2014 Maxime
-** Last update Tue Dec 30 18:13:39 2014 Maxime
+** Last update Tue Dec 30 18:22:29 2014 Maxime
 */
 
 #include <stdlib.h>
@@ -56,23 +56,23 @@ int		main(int ac, char **av)
   if (opt == 1)
     {
       printf("sphère de rayon %d\n", R);
-      a = Vx² + Vy² + Vz²;
+      a = Vx * Vx + Vy * Vy + Vz * Vz;
       b = (2 * x * Vx) + (2 * y * Vy) + (2 * z * Vz);
-      c = x² + y² + z² - R²;
+      c = x * x + y * y + z * z - R * R;
     }
   else if (opt == 2)
     {
       printf("cylindre de rayon %d\n", R);
-      a = Vx² + Vy²;
+      a = Vx * Vx + Vy * Vy;
       b = (2 * x * Vx) + (2 * y * Vy);
-      c = x² + y² - R²;
+      c = x * x + y * y - R * R;
     }
   else if (opt == 3)
     {
       printf("cône d'angle %d degrés\n", R);
-      a = Vx² + Vy² - (Vz² / tan(R)²);
-      b = (2 * x * Vx) + (2 * y * Vy) + ((2 * z * Vz) / tan(R)²);
-      c = x² + y² - (z² / tan(R)²);
+      a = Vx * Vx + Vy * Vy - (Vz * Vz / (tan(R) * tan(R)));
+      b = (2 * x * Vx) + (2 * y * Vy) + ((2 * z * Vz) / (tan(R) * tan(R)));
+      c = x * x + y * y - (z * z / (tan(R) * tan(R)));
     }
   else
     {
@@ -80,7 +80,7 @@ int		main(int ac, char **av)
       return (1);
     }
   printf("droite passant par le point (%d, %d, %d), de vecteur directeur (%d, %d, %d)\n", x, y, z, Vx, Vy, Vz);
-  delta = b² - 4 * a * c;
+  delta = b * b - 4 * a * c;
   if (delta == 0)
     {
       printf("Nombre de point : 1\n");
