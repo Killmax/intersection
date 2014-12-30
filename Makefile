@@ -5,7 +5,7 @@
 ## Login   <brugue_m@epitech.net>
 ## 
 ## Started on  Thu Dec 25 14:28:17 2014 Maxime
-## Last update Thu Dec 25 14:32:23 2014 Maxime
+## Last update Tue Dec 30 16:50:06 2014 Maxime
 ##
 
 NAME= 104intersection
@@ -17,7 +17,7 @@ OBJ= $(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	cc $(OBJ) -o $(NAME) -g
+	cc $(OBJ) -o $(NAME) -g -lm
 
 clean:
 	rm -f $(OBJ)
