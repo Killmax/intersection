@@ -5,7 +5,7 @@
 ** Login   <brugue_m@epitech.net>
 ** 
 ** Started on  Tue Dec 30 17:15:18 2014 Maxime
-** Last update Tue Dec 30 18:22:29 2014 Maxime
+** Last update Fri Jan  2 15:19:01 2015 Maxime
 */
 
 #include <stdlib.h>
@@ -70,9 +70,9 @@ int		main(int ac, char **av)
   else if (opt == 3)
     {
       printf("cône d'angle %d degrés\n", R);
-      a = Vx * Vx + Vy * Vy - (Vz * Vz / (tan(R) * tan(R)));
-      b = (2 * x * Vx) + (2 * y * Vy) + ((2 * z * Vz) / (tan(R) * tan(R)));
-      c = x * x + y * y - (z * z / (tan(R) * tan(R)));
+      a = Vx * Vx + Vy * Vy - ((Vz * Vz) / (tan(R) * tan(R)));
+      b = (2 * x * Vx) + (2 * y * Vy)  - ((2 * z * Vz) / (tan(R) * tan(R)));
+      c = x * x + y * y - ((z * z) / (tan(R) * tan(R)));
     }
   else
     {
@@ -88,7 +88,7 @@ int		main(int ac, char **av)
       printf("Point 1 : (%.3f, %.3f, %.3f)\n", x + x1 * Vx, y + x1 * Vy, z + x1 * Vz);
     }
   else if (delta < 0)
-    printf("Nombre de point : 0");
+    printf("Nombre de point : 0\n");
   else if (delta > 0)
     {
       printf("Nombre de point : 2\n");
