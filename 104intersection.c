@@ -5,7 +5,7 @@
 ** Login   <brugue_m@epitech.net>
 ** 
 ** Started on  Tue Dec 30 17:15:18 2014 Maxime
-** Last update Fri Jan  2 15:50:58 2015 Maxime
+** Last update Fri Mar 13 13:38:25 2015 bruguet Maxime
 */
 
 #include <stdlib.h>
@@ -72,7 +72,7 @@ int		main(int ac, char **av)
       printf("cône d'angle %d degrés\n", R);
       a = Vx * Vx + Vy * Vy - ((Vz * Vz) / (tan(R) * tan(R)));
       b = (2 * x * Vx) + (2 * y * Vy)  - ((2 * z * Vz) / (tan(R) * tan(R)));
-       c = x * x + y * y - ((z * z) / (tan(R) * tan(R)));
+      c = x * x + y * y - ((z * z) / (tan(R) * tan(R)));
     }
   else
     {
